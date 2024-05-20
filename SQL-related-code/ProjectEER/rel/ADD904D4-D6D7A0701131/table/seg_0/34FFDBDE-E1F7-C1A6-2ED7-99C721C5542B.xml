@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="34FFDBDE-E1F7-C1A6-2ED7-99C721C5542B" name="Employee">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>2EA028A0-0BC5-9214-11A6-DDB7D08D4224</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AccountID" id="7FB3F5A6-2B3B-F572-F3AF-7CFE8ABF070B">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>4A54C8A7-4398-384D-2A9D-8AC9E00D07EF</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D55B23CE-C729-EAB2-08D6-BB5B97399425" referredColumn="E2A15619-C65D-9051-368B-69F4FB6C4F56"/>
+</associations>
+</Column>
+<Column name="EmployeeType" id="6298CA15-A451-66E2-92F4-EBA208B4F5FD">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>2DBB4191-640F-095A-C7D4-FC3D07937D30</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C98CC765-E82F-E1F1-135F-4930767E8067" name="Employee_PK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>0962245D-754D-D4AD-3618-94CE0751B857</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FB3F5A6-2B3B-F572-F3AF-7CFE8ABF070B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="87C33919-AE05-3D0A-4C13-842F8F4DB3B6" name="Employee_Account_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>9697651B-98AD-25B9-74A5-BD822FA248B3</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FB3F5A6-2B3B-F572-F3AF-7CFE8ABF070B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

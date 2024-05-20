@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DC42AFAE-AAF4-CDE6-7218-3F135F82069B" name="Account">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:03:22 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<engineerTo>
+<item key="ADD904D4-AB20-2B75-3CB0-D6D7A0701131" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="AccountID" id="4A54C8A7-4398-384D-2A9D-8AC9E00D07EF">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:03:41 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<engineerTo>
+<item key="ADD904D4-AB20-2B75-3CB0-D6D7A0701131" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fname" id="A3EC002D-BC25-A138-E431-6DB3FBF76A6A">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:05:15 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<engineerTo>
+<item key="ADD904D4-AB20-2B75-3CB0-D6D7A0701131" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Lname" id="02AA2DF2-B512-822E-4562-890F3403DD44">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:06:10 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<engineerTo>
+<item key="ADD904D4-AB20-2B75-3CB0-D6D7A0701131" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Email" id="0543CBB8-3F1E-BCC3-1306-F9B891B78FC8">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:06:26 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<engineerTo>
+<item key="ADD904D4-AB20-2B75-3CB0-D6D7A0701131" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Password" id="35287B86-2898-3CFE-99C9-95B1C00D0A3C">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:06:50 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<engineerTo>
+<item key="ADD904D4-AB20-2B75-3CB0-D6D7A0701131" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AccountType" id="EE61585C-692F-28C3-47AB-1614A3678314">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 18:47:27 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<engineerTo>
+<item key="ADD904D4-AB20-2B75-3CB0-D6D7A0701131" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0962245D-754D-D4AD-3618-94CE0751B857" name="Account PK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:04:12 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="ADD904D4-AB20-2B75-3CB0-D6D7A0701131" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4A54C8A7-4398-384D-2A9D-8AC9E00D07EF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

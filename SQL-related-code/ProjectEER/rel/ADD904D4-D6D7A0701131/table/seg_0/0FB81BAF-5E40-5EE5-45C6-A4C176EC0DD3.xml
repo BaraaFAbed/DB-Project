@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0FB81BAF-5E40-5EE5-45C6-A4C176EC0DD3" name="Product">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>6DFE459B-5D53-AC2B-0941-A7E1E9EF8347</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ProductID" id="10DE7E75-920D-2660-6C75-6839FBA50E18">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>C16EA1A8-BED9-1032-C3FA-585AC9E587B4</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="5802AE57-6BA9-9464-CB42-A872F8FB24BA">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>88A83750-F2DB-FB8D-EE93-32DEB1D42A56</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Price" id="500B9739-3B08-3D0C-4696-6E72A7F9E3CC">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>72AB5AC4-746F-B15B-3DAB-E10529F5ACA4</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Size" id="3C2AFF77-D6D3-45AE-9AFC-3BE074F2CF67">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>5C49D45F-6FA6-3F5A-3309-E4F0066757A8</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4D38A278-91B4-A7A8-7D1E-9485D78DE9A5" name="Product_PK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>7FA45860-C380-2866-472E-67ED06C10E81</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="10DE7E75-920D-2660-6C75-6839FBA50E18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

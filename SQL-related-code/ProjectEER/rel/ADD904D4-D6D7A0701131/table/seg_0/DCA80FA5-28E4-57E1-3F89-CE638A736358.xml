@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DCA80FA5-28E4-57E1-3F89-CE638A736358" name="Stores">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="WarehouseID" id="B03695B4-68AD-8C94-2593-26EAEBF06A83">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8B0C516A-E114-B952-71B8-ECDE2CBC19C9" referredColumn="F1AFDA58-5BE3-FE1D-B322-56BACBB79CFA"/>
+</associations>
+</Column>
+<Column name="ProductID" id="1E622A75-9946-365A-5CDA-D7CBA0DC5848">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E7A21BF8-7DDF-DE5C-6E20-13837EF1DD42" referredColumn="10DE7E75-920D-2660-6C75-6839FBA50E18"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="859419CB-F730-4B29-578C-F209C1621992" name="Stores_PK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B03695B4-68AD-8C94-2593-26EAEBF06A83"/>
+<colUsage columnID="1E622A75-9946-365A-5CDA-D7CBA0DC5848"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D9C7E897-6DEE-8F78-DBCB-6EDDE3E2A794" name="Stores_Warehouse_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>E01EE392-C3AF-DB00-165A-796FD7BE8CA9</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B03695B4-68AD-8C94-2593-26EAEBF06A83"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F232BFE-53E1-7E96-B7B3-C3A776479220" name="Stores_Product_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>E01EE392-C3AF-DB00-165A-796FD7BE8CA9</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E622A75-9946-365A-5CDA-D7CBA0DC5848"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

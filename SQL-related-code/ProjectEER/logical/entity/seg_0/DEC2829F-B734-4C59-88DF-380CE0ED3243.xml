@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DEC2829F-B734-4C59-88DF-380CE0ED3243" name="Supplier">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:11:02 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<engineerTo>
+<item key="ADD904D4-AB20-2B75-3CB0-D6D7A0701131" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>DC42AFAE-AAF4-CDE6-7218-3F135F82069B</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CompanyName" id="4D55E6CA-9D4A-F67B-D91A-13361A201717">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:11:14 UTC</createdTime>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<engineerTo>
+<item key="ADD904D4-AB20-2B75-3CB0-D6D7A0701131" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D0CC1F71-7718-9B0A-5FE6-E4EA0586FA24" name="Supplier">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>DEC2829F-B734-4C59-88DF-380CE0ED3243</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AccountID" id="E39C88BB-6429-AFFA-24C2-0F27DB85A057">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>4A54C8A7-4398-384D-2A9D-8AC9E00D07EF</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A2713AA7-6E06-46DA-18FC-104AE7109229" referredColumn="E2A15619-C65D-9051-368B-69F4FB6C4F56"/>
+</associations>
+</Column>
+<Column name="CompanyName" id="D7C028DA-2451-8FC9-6E7F-C8024D133EF9">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>4D55E6CA-9D4A-F67B-D91A-13361A201717</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="41B925D7-BB6A-DF6B-92A0-A6BF96AF8661" name="Supplier_PK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>0962245D-754D-D4AD-3618-94CE0751B857</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E39C88BB-6429-AFFA-24C2-0F27DB85A057"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7B5AFC39-3C9D-CA95-3E0A-98815051B0C3" name="Supplier_Account_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>E4E1DC0F-E93A-C041-CD2B-729A16D517A7</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E39C88BB-6429-AFFA-24C2-0F27DB85A057"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

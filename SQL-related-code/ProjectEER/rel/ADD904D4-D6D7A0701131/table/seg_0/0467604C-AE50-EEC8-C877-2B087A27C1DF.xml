@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0467604C-AE50-EEC8-C877-2B087A27C1DF" name="Warehouse">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>2A525DC8-4B8E-66A6-0668-4496091DEF69</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="WarehouseID" id="F1AFDA58-5BE3-FE1D-B322-56BACBB79CFA">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>C683A498-1C8C-C041-B8E5-F48A1CC6C020</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Location" id="ED68E94E-F062-DB42-C42D-95D4AF8D575A">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>557159DA-3661-052F-5FB6-3F7259DF26D5</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Capacity" id="672F0F7C-1086-733A-49A0-E446B6A004D2">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>7EFC87B4-D852-80C7-E0A3-FD0BC3F2E959</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AdministratorID" id="617A016A-306A-C38A-BF6B-5E80A59C4909">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>17E6CA20-B2F9-A6D0-6091-C227F5CA6E43</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="625053BC-6634-EA4E-FB35-F3224A395917" referredColumn="51F6BD33-A77A-4981-3F59-AB48F5480365"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AB586B01-7C68-9D4D-0E80-5EECAF50C011" name="Warehouse_PK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>20F8F311-37BE-CBDD-9473-F59467247CBF</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F1AFDA58-5BE3-FE1D-B322-56BACBB79CFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C8A66E2-6180-E1A5-B944-BB24D921D61A" name="Warehouse_Administrator_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>075AB5D5-1F5B-8FB9-6FD3-6A7E7AB5FF1D</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="617A016A-306A-C38A-BF6B-5E80A59C4909"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

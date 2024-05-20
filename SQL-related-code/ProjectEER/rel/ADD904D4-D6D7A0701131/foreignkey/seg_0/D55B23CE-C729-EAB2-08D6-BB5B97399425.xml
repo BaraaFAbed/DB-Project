@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D55B23CE-C729-EAB2-08D6-BB5B97399425" containerWithKeyObject="34FFDBDE-E1F7-C1A6-2ED7-99C721C5542B" localFKIndex="87C33919-AE05-3D0A-4C13-842F8F4DB3B6" name="Employee_Account_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>9697651B-98AD-25B9-74A5-BD822FA248B3</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<referredTableLongName>Account</referredTableLongName>
+<arc>0FEC7E53-CC4D-9D05-29B2-118546A578D5</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>31BDCEA6-6C09-A510-779C-D14A43651F15</referredTableID>
+<keyObject>EAFED440-F287-E883-6040-2F57F3FEAF6E</keyObject>
+<referredKeyID>EAFED440-F287-E883-6040-2F57F3FEAF6E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>AccountID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<discriminatorColumn>ED9B4FED-E773-9517-F874-5F2B69D90D22</discriminatorColumn>
+<discriminatorValue>employee</discriminatorValue>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

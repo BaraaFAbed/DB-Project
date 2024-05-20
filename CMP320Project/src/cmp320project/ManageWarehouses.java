@@ -1,0 +1,323 @@
+package cmp320project;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import java.util.*;
+
+/**
+ *
+ * @author baraa
+ */
+public class ManageWarehouses extends javax.swing.JFrame {
+
+    // Instance variables
+    myDBCon dbCon;              // Database connection object
+    ResultSet rs;               // Result set for warehouse data
+    ResultSet rs2;              // Result set for warehouse used capacity
+    ResultSet rs1;              // Result set for warehouse used capacity
+    LoginUser user;
+    
+    /**
+     * Creates new form ManageWarehouses
+     */
+    public ManageWarehouses(LoginUser user) {
+        // Initializes GUI components created using the form editor in NetBeans or similar IDE
+        initComponents();
+        
+        // getting user
+        this.user = user;
+        
+        // creating connection
+        dbCon = new myDBCon();
+        
+        // Positions this JFrame to the center of the screen
+        this.setLocationRelativeTo(null);
+        
+        // Fetch and display new data from the database to populate the form
+        getNewData();
+    }
+    
+    // This method fetches and sets the data from the database to populate the form's fields
+    private void getNewData() {
+
+        try {
+            // Query to fetch account details of warehouses
+            rs = dbCon.executeStatement("SELECT warehouseID, capacity FROM warehouse ORDER BY WarehouseID ASC ");
+                        
+            // Moves the cursor of the result set to the first row and populates the form fields with data
+            rs.beforeFirst();
+            rs.first();
+            populateFields();
+        } catch (SQLException e) {
+            // Display an error message in case of any SQL exceptions
+            javax.swing.JLabel label = new javax.swing.JLabel("SQL Error - Display selected warehouse.");
+            label.setFont(new java.awt.Font("Arial", java.awt.Font.BOLD, 18));
+            JOptionPane.showMessageDialog(null, label, "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    private void populateFields() {
+        try {
+            // Getting used capacity for warehouse
+            rs2 = dbCon.executeStatement("SELECT SUM(\"Size\" * Quantity) AS UsedCapacity FROM stores S JOIN product P ON S.ProductID = P.ProductID WHERE WarehouseID = " + rs.getString("WarehouseID"));
+            rs2.next();
+            // Setting form fields with the current row's data from the result set.
+            txtID.setText(rs.getString("WarehouseID"));
+            if (rs2.getString("UsedCapacity") == null) txtUsedCapacity.setText("0");
+            else txtUsedCapacity.setText(rs2.getString("UsedCapacity"));
+            txtTotalCapacity.setText(rs.getString("Capacity"));
+            
+            // Update the navigation buttons' states.
+            EnableDisableButtons();
+        } catch (SQLException ex) {
+            Logger.getLogger(UpdateDeleteEmployee.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    // This method moves the result set's cursor to the next record and populates the form fields.
+    private void MoveNext() {
+        try {
+            if (!rs.isLast()) {
+                rs.next(); 
+                populateFields();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UpdateDeleteEmployee.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    // This method moves the result set's cursor to the previous record and populates the form fields.
+    private void MovePrevious() {
+        try {
+            // TODO add your handling code here:
+            if (!rs.isFirst()) {
+                rs.previous();
+                populateFields();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UpdateDeleteEmployee.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    // This method updates the state of the navigation buttons based on the cursor's position in the result set.
+    private void EnableDisableButtons() {
+        try {
+            // Disable the Previous button if we're at the first record.
+            if (rs.isFirst()) {
+                btnPrevious.setEnabled(false);
+            } else {
+                btnPrevious.setEnabled(true);
+            }
+
+            // Disable the Next button if we're at the last record.
+            if (rs.isLast()) {
+                btnNext.setEnabled(false);
+            } else {
+                btnNext.setEnabled(true);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UpdateDeleteEmployee.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtUsedCapacity = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtTotalCapacity = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        txtID = new javax.swing.JTextField();
+        btnAddNewEmp = new javax.swing.JButton();
+        btnNext = new javax.swing.JButton();
+        btnPrevious = new javax.swing.JButton();
+        btnAddNewEmp1 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("Total Capacity:");
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel8.setText("ID:");
+
+        txtUsedCapacity.setEditable(false);
+        txtUsedCapacity.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setText("Used Capacity:");
+
+        txtTotalCapacity.setEditable(false);
+        txtTotalCapacity.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtTotalCapacity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTotalCapacityActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setText("Manage Warehouses");
+
+        txtID.setEditable(false);
+        txtID.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        btnAddNewEmp.setFont(new java.awt.Font("Forte", 0, 24)); // NOI18N
+        btnAddNewEmp.setText("Capacity Details");
+        btnAddNewEmp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddNewEmpActionPerformed(evt);
+            }
+        });
+
+        btnNext.setFont(new java.awt.Font("Forte", 0, 24)); // NOI18N
+        btnNext.setText("Next >>");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextActionPerformed(evt);
+            }
+        });
+
+        btnPrevious.setFont(new java.awt.Font("Forte", 0, 24)); // NOI18N
+        btnPrevious.setText("<< Previous");
+        btnPrevious.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPreviousActionPerformed(evt);
+            }
+        });
+
+        btnAddNewEmp1.setFont(new java.awt.Font("Forte", 0, 24)); // NOI18N
+        btnAddNewEmp1.setText("Transfer Products");
+        btnAddNewEmp1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddNewEmp1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(194, 194, 194)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtTotalCapacity, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
+                    .addComponent(txtID)
+                    .addComponent(txtUsedCapacity))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(87, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(205, 205, 205))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnPrevious)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnAddNewEmp)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnAddNewEmp1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnNext)
+                        .addGap(37, 37, 37))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtUsedCapacity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(txtTotalCapacity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAddNewEmp)
+                    .addComponent(btnPrevious)
+                    .addComponent(btnNext)
+                    .addComponent(btnAddNewEmp1))
+                .addGap(0, 57, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void txtTotalCapacityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalCapacityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTotalCapacityActionPerformed
+
+    private void btnAddNewEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNewEmpActionPerformed
+        try {
+            // TODO add your handling code here:
+            rs1 = dbCon.executeStatement("SELECT COUNT(ProductID) AS NumberOfProducts FROM stores WHERE WarehouseID = " + txtID.getText());
+            rs1.next();
+            if (Integer.parseInt(rs1.getString("NumberOfProducts")) == 0)
+            {
+                JOptionPane.showMessageDialog(null, "No products are in this warehouse");
+            }
+            else (new CapacityInfoForm(txtID.getText())).setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(ManageWarehouses.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnAddNewEmpActionPerformed
+
+    private void btnAddNewEmp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNewEmp1ActionPerformed
+        try {
+            // TODO add your handling code here:
+            rs1 = dbCon.executeStatement("SELECT COUNT(ProductID) AS NumberOfProducts FROM stores WHERE WarehouseID = " + txtID.getText());
+            rs1.next();
+            if (Integer.parseInt(rs1.getString("NumberOfProducts")) == 0)
+            {
+                JOptionPane.showMessageDialog(null, "No products are in this warehouse");
+            }
+            else (new TransferForm(Integer.parseInt(txtID.getText()), user)).setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(ManageWarehouses.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnAddNewEmp1ActionPerformed
+
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+        MoveNext();
+    }//GEN-LAST:event_btnNextActionPerformed
+
+    private void btnPreviousActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPreviousActionPerformed
+        MovePrevious();
+    }//GEN-LAST:event_btnPreviousActionPerformed
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddNewEmp;
+    private javax.swing.JButton btnAddNewEmp1;
+    private javax.swing.JButton btnNext;
+    private javax.swing.JButton btnPrevious;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JTextField txtID;
+    private javax.swing.JTextField txtTotalCapacity;
+    private javax.swing.JTextField txtUsedCapacity;
+    // End of variables declaration//GEN-END:variables
+}

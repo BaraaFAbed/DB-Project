@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="20C86563-85AF-EDE1-F2C1-B0BCC74AD6B5" name="OrderLine">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>03FB645E-3DF5-8861-8FEB-DB11B9896253</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LineNumber" id="17CD1D30-8CEB-1CD6-4F44-32DC3E4EBD78">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>DEA2235B-7C1C-9BB0-CCF1-BA7F36D8F229</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LineTotal" id="442EB254-9D8F-FFEA-ACEB-1EDD1136381D">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>9D33B0B9-4F45-C993-DEE4-6057CA8049A2</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OrderID" id="6E5A8ADE-2B72-E6FE-6302-1EB842479F09">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>309269DF-F942-C485-7DBE-D45B9D0E3D91</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F6EAB7C-4188-A01A-D561-90D2D1C0AE99" referredColumn="584FA719-DEE1-5E5E-D177-C19E083C0598"/>
+</associations>
+</Column>
+<Column name="ProductID" id="B8AEDE37-EC8C-3A8B-3144-8B89C82A2D64">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>6200D7D5-1125-D40E-FBA9-B6CFFE31BFBA</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1884F6FE-580D-2D82-72E1-42B2F7A9D1B4" referredColumn="10DE7E75-920D-2660-6C75-6839FBA50E18"/>
+</associations>
+</Column>
+<Column name="Quantity" id="DE0ECA65-DCAE-8FFB-1C9B-F82C493C653C">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>D7BE6CC2-A570-1465-D65F-736E72433C01</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>1884F6FE-580D-2D82-72E1-42B2F7A9D1B4</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4E577A7B-7DD6-3FA5-382A-E582781D23D6" name="OrderLine_PK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>0589799A-97C4-93CC-69AD-C7E17BB6D796</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17CD1D30-8CEB-1CD6-4F44-32DC3E4EBD78"/>
+<colUsage columnID="6E5A8ADE-2B72-E6FE-6302-1EB842479F09"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EDA50E88-0E04-CB13-B38B-CDF903E29E75" name="OrderLine_Order_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>267278EB-5871-14EB-06C6-BEB3BFBB8E60</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6E5A8ADE-2B72-E6FE-6302-1EB842479F09"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="031BFF80-B5D8-033E-03C4-EC6F384C724B" name="OrderLine_Product_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>90D5966A-2396-1436-E063-059C8DA3129F</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8AEDE37-EC8C-3A8B-3144-8B89C82A2D64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

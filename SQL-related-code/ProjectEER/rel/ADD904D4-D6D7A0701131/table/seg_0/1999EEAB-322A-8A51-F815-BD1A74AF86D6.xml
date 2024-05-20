@@ -1,0 +1,161 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1999EEAB-322A-8A51-F815-BD1A74AF86D6" name="Transfer">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>A22D3454-88E6-0265-97AC-66CEECA3AB59</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Date_Time" id="FEBAFFEE-7250-2B31-3A01-8C5A28B2CACD">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>44C7F530-045B-B0DC-10B1-F01CE3A2E64E</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EmployeeID" id="32008C6E-8053-D417-6761-DDBAF1B73E4F">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>0F87A7D6-EDEB-46F0-1F10-F43B0A196583</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4ACE640D-5B6D-756E-8084-F227DFBB6FCE" referredColumn="7FB3F5A6-2B3B-F572-F3AF-7CFE8ABF070B"/>
+</associations>
+</Column>
+<Column name="ProductID" id="7C617F9F-BFA3-BFE2-4EB0-5DE9C8A54122">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>B1B68A75-B9AD-352C-AAF3-F106C97DDA29</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B44AF85B-D8A8-336B-6582-EDB4BBEEDDA9" referredColumn="10DE7E75-920D-2660-6C75-6839FBA50E18"/>
+</associations>
+</Column>
+<Column name="FromWarehouseID" id="5ABE880B-7954-8E23-2536-D856565884BF">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>FE69EFF3-3DD7-A226-4332-F41718794C82</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="53378CE8-27DE-E7DF-8472-697ADCDAD37C" referredColumn="F1AFDA58-5BE3-FE1D-B322-56BACBB79CFA"/>
+</associations>
+</Column>
+<Column name="ToWarehouseID" id="34E8D759-E4C1-19DC-C082-320EEA1261F8">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>E001A53D-5F41-A30C-FDBE-3CA27750E60D</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6AE72521-FB7D-180E-D3D0-BB79FC7301AD" referredColumn="F1AFDA58-5BE3-FE1D-B322-56BACBB79CFA"/>
+</associations>
+</Column>
+<Column name="Quantity" id="87E3E8A7-06B7-8724-DB88-5505BE9F0845">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>9D890915-DA1B-DB55-5EA7-9ECB84D3BE7F</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>B44AF85B-D8A8-336B-6582-EDB4BBEEDDA9</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8CC616F4-36AB-3D47-BC7E-89031A89AFAF" name="Transfer_PK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>6ADA528C-FFD2-A997-2048-61CC858D23D0</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FEBAFFEE-7250-2B31-3A01-8C5A28B2CACD"/>
+<colUsage columnID="32008C6E-8053-D417-6761-DDBAF1B73E4F"/>
+<colUsage columnID="7C617F9F-BFA3-BFE2-4EB0-5DE9C8A54122"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9BCF7E2A-5CB5-14B5-A5A1-4A25AAE0CA39" name="Transfer_Warehouse_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>E3812873-39B1-BB83-C1A6-05727E96033F</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5ABE880B-7954-8E23-2536-D856565884BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1BE926E5-A91D-4032-0C4D-F2D54E0BFFAE" name="Transfer_Warehouse_FKv1">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>8B2AD939-3F4B-B06D-A046-958D4EB4CA0E</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="34E8D759-E4C1-19DC-C082-320EEA1261F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B2A4DC70-87D8-8DCB-DF9C-B19E39B4EDC4" name="Transfer_Product_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>CBA0E1FB-5930-1255-721F-AFAAFCAE4BA4</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C617F9F-BFA3-BFE2-4EB0-5DE9C8A54122"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3051E0EE-FFE7-CF45-6A88-7953EB69268E" name="Transfer_Employee_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>75D81A1E-6892-D036-B35E-DBFF8DBC7BE6</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32008C6E-8053-D417-6761-DDBAF1B73E4F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

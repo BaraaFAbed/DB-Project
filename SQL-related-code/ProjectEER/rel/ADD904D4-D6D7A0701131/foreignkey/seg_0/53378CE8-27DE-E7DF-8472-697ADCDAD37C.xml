@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="53378CE8-27DE-E7DF-8472-697ADCDAD37C" containerWithKeyObject="1999EEAB-322A-8A51-F815-BD1A74AF86D6" localFKIndex="9BCF7E2A-5CB5-14B5-A5A1-4A25AAE0CA39" name="Transfer_Warehouse_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>E3812873-39B1-BB83-C1A6-05727E96033F</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<referredTableLongName>Warehouse</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0467604C-AE50-EEC8-C877-2B087A27C1DF</referredTableID>
+<keyObject>AB586B01-7C68-9D4D-0E80-5EECAF50C011</keyObject>
+<referredKeyID>AB586B01-7C68-9D4D-0E80-5EECAF50C011</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>WarehouseID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7E100614-1A8D-C771-D639-49D04C0CFD91" name="Administrator">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>3CBC3F94-66AA-92FB-28AE-F429D50ED0CF</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AccountID" id="51F6BD33-A77A-4981-3F59-AB48F5480365">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>4A54C8A7-4398-384D-2A9D-8AC9E00D07EF</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C3AB43AA-56E3-5445-EDCD-3A72A2A5C44A" referredColumn="7FB3F5A6-2B3B-F572-F3AF-7CFE8ABF070B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6CF57E92-B6F5-1F6E-211C-9BC5BBF9DDF6" name="Administrator_PK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>0962245D-754D-D4AD-3618-94CE0751B857</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51F6BD33-A77A-4981-3F59-AB48F5480365"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F601839A-BDC2-3FE5-D1A1-1B2B5014C97C" name="Administrator_Employee_FK">
+<createdBy>admin</createdBy>
+<createdTime>2023-11-04 03:44:03 UTC</createdTime>
+<generatorID>1F24FDA3-5D17-9562-3367-2E254BAF6E14</generatorID>
+<ownerDesignName>ProjectEER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51F6BD33-A77A-4981-3F59-AB48F5480365"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
